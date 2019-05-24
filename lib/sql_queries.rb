@@ -58,5 +58,5 @@ FROM projects a
 INNER JOIN pledges b 
   ON a.id = b.project_id 
 WHERE a.category LIKE '%book%'
-GROUP BY a.category LIKE '%book%"
+GROUP BY a.category"
 end
