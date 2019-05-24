@@ -30,7 +30,7 @@ FROM projects a
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 GROUP BY a.id
-HAVING SUM(amount)
+HAVING SUM(amount) >= funding_goal
 ORDER BY SUM(amount)"
 end
 
