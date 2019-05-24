@@ -48,7 +48,7 @@ def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_ca
 FROM projects a 
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
-WHERE category = 'music'
+WHERE 'category' = music
 GROUP BY category"
 end
 
