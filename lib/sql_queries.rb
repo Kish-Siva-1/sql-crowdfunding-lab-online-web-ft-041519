@@ -49,7 +49,6 @@ FROM projects a
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 WHERE a.category LIKE '%music%'
-GROUP BY category"
 end
 
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
