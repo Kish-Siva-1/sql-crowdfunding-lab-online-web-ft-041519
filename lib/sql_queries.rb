@@ -30,6 +30,7 @@ FROM projects a
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 GROUP BY title
+HAVING SUM(amount)
 ORDER BY SUM(amount)"
 end
 
