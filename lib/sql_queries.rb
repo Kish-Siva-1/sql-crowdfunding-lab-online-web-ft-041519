@@ -14,7 +14,7 @@ LEFT JOIN pledges b
 LEFT JOIN users u 
   ON u.id = b.user_id
 GROUP BY title
-ORDER BY title, name"
+ORDER BY name"
 end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
