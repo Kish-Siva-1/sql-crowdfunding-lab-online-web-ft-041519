@@ -49,7 +49,7 @@ FROM projects a
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 WHERE a.category LIKE '%music%'
-ORDERY BY amount"
+ORDER BY BY amount"
 
 end
 
