@@ -9,9 +9,9 @@
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
 "SELECT title, amount 
 FROM projects a 
-INNER JOIN pledges b 
+LEFT JOIN pledges b 
   ON a.id = b.project_id 
-INNER JOIN users u 
+LEFT JOIN users u 
   ON u.id = b.user_id 
 ORDER BY name"
 end
