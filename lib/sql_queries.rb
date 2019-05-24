@@ -12,7 +12,7 @@ FROM projects a
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 LEFT JOIN users u 
-  ON u.id = a.user_id
+  ON u.id = b.user_id
 GROUP BY title
 ORDER BY name"
 end
