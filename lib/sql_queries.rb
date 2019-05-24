@@ -16,7 +16,7 @@ ORDER BY title"
 end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
-"SELECT name, SUM(amount)
+"SELECT name, age, SUM(amount)
 FROM users a 
 LEFT JOIN pledges b 
   ON a.id = b.user_id 
