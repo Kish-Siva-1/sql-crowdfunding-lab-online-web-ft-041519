@@ -30,7 +30,7 @@ FROM projects a
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 GROUP BY title
-ORDER BY title"
+ORDER BY SUM(amount)"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
