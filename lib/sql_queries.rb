@@ -25,12 +25,11 @@ ORDER BY name"
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-"SELECT title, SUM(amount)
+"SELECT title, SUM(amount), SUM(funding_goal)
 FROM projects a 
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
 GROUP BY title
-HAVING SUM(funding_goal) <= SUM(amount)  
 ORDER BY title"
 end
 
