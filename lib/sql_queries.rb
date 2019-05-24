@@ -11,8 +11,6 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
 FROM projects a 
 LEFT JOIN pledges b 
   ON a.id = b.project_id 
-LEFT JOIN users u 
-  ON u.id = b.user_id
 GROUP BY title
 ORDER BY title"
 end
